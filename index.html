@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conteúdo HTML5 e Formulário Avançado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+    header, section, footer {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #999;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .form-section {
+      margin-top: 2rem;
+    }
+    .submit-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Demonstração de Conteúdo HTML5 e Formulário</h1>
+    <p>Esta página demonstra o uso eficaz de listas, tabelas, mídias e um formulário HTML5 completo com validação nativa.</p>
+  </header>
+
+  <section>
+    <h2>Top 3 Boas Práticas de Programação</h2>
+    <ol>
+      <li>Utilizar tags semânticas HTML5 para melhor estrutura e acessibilidade.</li>
+      <li>Escrever código limpo, indentado e de fácil manutenção.</li>
+      <li>Sempre validar os dados dos formulários antes do envio.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Plano de Estudos Semanal</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Tema</th>
+          <th>Horas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Segunda-feira</td>
+          <td>Introdução ao HTML e CSS</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Terça-feira</td>
+          <td>Formulários e Validação</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Quarta-feira</td>
+          <td>Introdução ao JavaScript</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Exibição de Mídia</h2>
+    <figure>
+      <img src="https://via.placeholder.com/600x200" alt="Imagem Exemplo" style="width:100%; max-width:600px;">
+      <figcaption>Imagem de exemplo usada para demonstração visual.</figcaption>
+    </figure>
+    <audio controls>
+      <source src="audio-exemplo.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </section>
+
+  <section class="form-section">
+    <h2>Formulário de Inscrição</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required minlength="3">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+
+        <label for="data">Data de nascimento:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="genero">Gênero:</label>
+        <select id="genero" name="genero" required>
+          <option value="">--Selecione--</option>
+          <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="outro">Outro</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Detalhes da Conta</legend>
+        <label for="usuario">Nome de usuário:</label>
+        <input type="text" id="usuario" name="usuario" required pattern="^[a-zA-Z0-9_]{5,15}$" placeholder="5 a 15 caracteres">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required minlength="6" placeholder="Mínimo 6 caracteres">
+
+        <label for="confirmar">Confirmar senha:</label>
+        <input type="password" id="confirmar" name="confirmar" required minlength="6">
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferências</legend>
+        <label for="newsletter">
+          <input type="checkbox" id="newsletter" name="newsletter" checked>
+          Desejo receber a newsletter
+        </label>
+
+        <label for="bio">Breve biografia:</label>
+        <textarea id="bio" name="bio" rows="4" maxlength="200" placeholder="Conte um pouco sobre você..."></textarea>
+
+        <label for="codigo">Código de referência (somente leitura):</label>
+        <input type="text" id="codigo" value="PLP2025" readonly>
+      </fieldset>
+
+      <button type="submit" class="submit-btn">Enviar Inscrição</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tarefa de HTML5 | Desenvolvido por Estudante</p>
+  </footer>
+
+</body>
+</html>
